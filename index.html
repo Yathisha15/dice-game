@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+body {
+  background-color: #393E46;
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color: #4ECCA3;
+}
+
+p {
+  font-size: 2rem;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+  
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: red;
+}
+
+</style>
+<body>
+    <div class="container">
+        <h1>Refresh Me</h1>
+  
+        <div class="dice">
+          <p>Player 1</p>
+          <img class="img1" src="./images/dice6.png">
+        </div>
+  
+        <div class="dice">
+          <p>Player 2</p>
+          <img class="img2" src="./images/dice6.png">
+        </div>
+  
+      </div>
+</body>
+<script>
+    var randomNumber1 = Math.floor(Math.random()*6)+1;
+    var randomDiceGame = "images/dice"+randomNumber1+".png";
+    var image1 = document.querySelectorAll("img")[0].setAttribute("src",randomDiceGame);
+    var randomNumber2 = Math.floor(Math.random()*6)+1;
+    var randomDiceGame = "images/dice"+randomNumber2+".png";
+    var image2 = document.querySelectorAll("img")[1].setAttribute("src",randomDiceGame);
+    if(randomNumber1 > randomNumber2){
+        document.querySelectorAll("h1")[0].innerHTML = " 🚩Player1 wins!";
+        // document.querySelectorAll("h1")[0].innerHTML = "Refresh Me";
+
+    }else if(randomNumber1 < randomNumber2){
+        document.querySelectorAll("h1")[0].innerHTML = "Player2 wins!🚩";
+    }else{
+        document.querySelectorAll("h1")[0].innerHTML = "Dr 🚩aw!";  
+}
+</script>
+
+<footer>
+    <a target="_blank" href="https://yathisha15.github.io/capstone-project/">www.yathisha.com</a>
+  </footer>
+</html>
